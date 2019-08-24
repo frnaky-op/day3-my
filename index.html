@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Knowledge Explorer</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="lib/ckeditor/ckeditor.js" defer></script>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/Link.js" defer></script>
+    <script src="js/Node.js" defer></script>
+    <script src="js/RouteEditor.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+<div id="app" class="editmode">
+    <!-- slides -->
+</div>
+
+<div id="switchmode">
+    <span class="edit" data-mode="edit" >edit</span>
+    <div id="switch" class="switch edit" ></div>
+    <span class="view" data-mode="view">view</span>
+</div>
+
+<div class="editMode">
+    <span class="close">X</span>
+    <div id="editor"></div>
+    <div class="e_rolGroup">
+        <div class="rolControl" data-direction="1" > <label for="rol_1">Rolation 1</label> <input id="rol_1" placeholder="Rolation 1" type="text"> </div>
+        <div class="rolControl" data-direction="2" > <label for="rol_2">Rolation 2</label> <input id="rol_2" placeholder="Rolation 2" type="text"> </div>
+        <div class="rolControl" data-direction="4" > <label for="rol_4">Rolation 4</label> <input id="rol_4" placeholder="Rolation 4" type="text"> </div>
+        <div class="rolControl" data-direction="3" > <label for="rol_3">Rolation 3</label> <input id="rol_3" placeholder="Rolation 3" type="text"> </div>
+    </div>
+</div>
+
+<div class="viewmode">
+    <div class="viewScreen">
+        <div id="view_content"></div>
+        <div class="fullscreeen"> <button class="full"></button> </div>
+        <div class="view_rolGroup">
+            <div class="viewRol" data-direction="1" data-title="Slide 1" >  </div>
+            <div class="viewRol" data-direction="2" data-title="Slide 2" >  </div>
+            <div class="viewRol" data-direction="4" data-title="Slide 4" >  </div>
+            <div class="viewRol" data-direction="3" data-title="Slide 3" >  </div>
+        </div>
+    </div>
+</div>
+
+<div id="templateGroup" hidden>
+
+    <div class="node" id="templateNode">
+        <div id="rolGroup">
+            <div class="rol" data-direction="1"></div>
+            <div class="rol" data-direction="2"></div>
+            <div class="rol" data-direction="4"></div>
+            <div class="rol" data-direction="3"></div>
+        </div>
+        <div class="btn btn-delete">X</div>
+        <div class="btn btn-edit">E</div>
+    </div>
+    <div class="link" id="linkTemplate"> <button class="delete">X</button> </div>
+    <div class="slide" id="slideTemplate"></div>
+    <div class="drag" id="dragTemplate"></div>
+</div>
+
+
+
+</body>
+</html>
